@@ -3197,8 +3197,8 @@ void printBallDiag( char name[], int nballs, int (*ballsP)[BALL_LEN] ) {
 	cairo_destroy(cr);
 
 	//convert for latex
-	sprintf(buf, "inkscape -C -z --file=%s --export-pdf=_%s.pdf --export-latex", filename, name);
-	system(buf);
+	//sprintf(buf, "inkscape -C -z --file=%s --export-pdf=_%s.pdf --export-latex", filename, name);
+	//system(buf);
 
 	//open svg
 	//sprintf(buf, "inkscape %s &\n", filename);	system(buf);
