@@ -26,6 +26,12 @@ cc `pkg-config --cflags gtk+-3.0 freetype2 cairo` fretDiagram.c -o output.out `p
 //#define PDF
 #define SVG
 
+/*uncomment the following line to draw the diagrams from the FIRST PRESSED fret, even if there's an open string.
+Otherwise (ie if SKIPOPENSTRINGS is undefined) if there's an open string the diagram will be drawn from the NUT
+(which is fret number 0) to the last pressed fret
+*/
+//#define SKIPOPENSTRINGS
+
 #define MIN_N_FRETS 2
 #define BALL_LEN 4
 
@@ -2969,12 +2975,21 @@ int Emaj7Balls[][BALL_LEN] = {
 int calcMinFret(int pointer[][BALL_LEN], int nballs){
 	int val = 0;
 	int i = 0;
-	while (i < nballs && ( pointer[i][2] == 2 /*|| pointer[i][1] == 0*/ ) ) { //uncomment to skip open strings
+	while (i < nballs && ( pointer[i][2] == 2
+							#ifdef SKIPOPENSTRINGS
+								|| pointer[i][1] == 0
+							#endif
+						 )
+		   ) {
 		i++;
 	}
 	val = pointer[i][1];
 	for(; i < nballs; i++ ){
-		if( pointer[i][1] < val /*&& pointer[i][1] != 0*/ && pointer[i][2] != 2 ){  //uncomment to skip open strings
+		if( pointer[i][1] < val
+			#ifdef SKIPOPENSTRINGS
+				&& pointer[i][1] != 0
+			#endif
+			&& pointer[i][2] != 2 ){
 			val = pointer[i][1];
 		}
 	}
