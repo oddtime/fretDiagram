@@ -6,6 +6,5 @@ Examples :
 www.stefanocarbonelli.it/data/programming/images/fretDiagramExamples.png
 
 Copyright(c) by Stefano Carbonelli
-www.stefanocarbonelli.it
 
 Licensed under the GPLv2.
