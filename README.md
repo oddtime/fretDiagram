@@ -1,9 +1,12 @@
 # Fret Diagram
-This program creates (guitar) fret diagrams for chords or scales, with GTK.
-Export in svg or pdf.
+This program creates (guitar) fret diagrams for chords or scales. 
+Graphics with GTK. Export in svg or pdf.
 
 Examples :
-www.stefanocarbonelli.it/data/programming/images/fretDiagramExamples.png
+
+![main-window][screenshot1]
+
+[screenshot1]: http://stefanocarbonelli.it/data/programming/images/fretDiagramExamples.png
 
 Copyright(c) by Stefano Carbonelli
 
