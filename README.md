@@ -4,9 +4,9 @@ Graphics with GTK. Export in svg or pdf.
 
 Examples :
 
-![screenshot1]
+![screenshot2]
 
-[screenshot1]: http://stefanocarbonelli.it/data/programming/images/fretDiagramExamples.png
+[screenshot2]: http://stefanocarbonelli.it/data/programming/images/fretDiagramExamples.png?
 
 The source .c file is intended to be modified and recompiled to export custom diagrams (hard coded).
 
